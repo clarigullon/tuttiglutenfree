@@ -50,47 +50,13 @@ div .tituloPrincipal h1 {
     margin-right: 5%;
 }
 /* header secciones postres */
-.fondoPostre {
-    background: url(../imagenespilares/postres.jpg);
-    width: 100%;
-    background-size: cover;
-    min-height: 100vh;
-    margin-bottom: 5%;
-}
-
-/*header seccion para el te */ 
-.fondoParate {
-    background: url(../imagenespilares/paraelte2.jpg);
-    width: 100%;
-    background-size: cover;
-    min-height: 100vh;
-    margin-bottom: 5%;
-}
-
-/*header seccion de salados */ 
-.fondoSalados {
+.fondoProductos {
     background: url(../imagenespilares/salados2.jpg);
     width: 100%;
     background-size: cover;
     min-height: 100vh;
     margin-bottom: 5%;
 }
-
-/* header seccion regalos */ 
-.fondoRegalos {
-    background: url(../imagenespilares/regalos2.jpg);
-    width: 100%;
-    background-size: cover;
-    min-height: 100vh;
-    margin-bottom: 5%;
-}
-
-
-div .tituloPrincipalregalos {
-    padding-top: 18%;
-    text-align: center;
-}
-
 /*header seccion recetas*/ 
 .fondoRecetas {
     background: url(../imagenespilares/recetas.jpg);
@@ -559,3 +525,18 @@ i.fa-shopping-cart {
     padding-left: 45%;
     color: #565656;
 }
+
+.totalCompra {
+    text-align: center;
+}
+.totalCompra input {
+    border: none;
+}
+.totalCompra input {
+    width: 30%;
+    text-align: center;
+    background-color:#f1f1f1;
+    font-size: 150%;
+}
+
+
