@@ -1,0 +1,88 @@
+/*colordeltitulo*/
+.header_titulo  {
+    color:black;
+    
+}
+
+
+/*color de los subtitulos*/
+.color_subtitulos {
+    color:#cb997e;
+    background-color: #f0efeb;
+}
+
+/*color de los subtitulos de la seccion recetas*/ 
+.color_subtitulosrecetas {
+    color: black;
+    margin-left: 5%;
+}
+.subtitulos_quienes {
+    color:#cb997e;
+    text-align: center;
+    margin-left: 5%;
+}
+
+/*fondonavbar*/
+.navbar-color{
+    background-color:#f0efeb;
+    width: 100%;
+}
+
+
+/*colores del banner informativo */
+.bannerinf_columnas {
+    background-color: #ffd7ba;
+    color:  #565656;
+    min-height: 20vh;
+}
+
+/* color de fondo de aside */
+aside {
+    background-color:#f0efeb;
+
+}
+
+/* estilo color pie de pagina */
+.footer {
+    .contenedorFooter {
+        background-color:#f0efeb;
+            .infoFooter {
+                color:black;
+            }
+    }
+}
+.footer ul li a i {
+    color: black;
+}
+.footer {
+    background-color: #f0efeb;
+}
+
+
+
+
+/* background color del flexbox */ 
+.padreFlexSecciones {
+    background-color: #f8edeb;
+}
+
+/*color parrafo recetas pag principal */ 
+.card p {
+    color: black;
+}
+
+/*background color del navbardrop */ 
+.dropdown-menu {
+    background-color:#f0efeb; ;
+}
+
+/* color formulario */ 
+.form {
+    background-color: #fff1e6;
+}
+/* color del subtitulo del formulario */ 
+.color_subtitulosform {
+    color: black;
+    background-color:#fff1e6 ;
+    text-align: center;
+}

@@ -1,0 +1,72 @@
+/* fuente*/
+.fuente_body {
+    font-family: Raleway;
+}
+
+/* header titulo */ 
+.header_titulo {
+    font-family: Lora;
+    font-size: 400%;
+    
+}
+
+.subtituloHeader {
+    font-family: Courgette;
+    font-size: 250%;
+}
+
+/* tamaño letra navbar */
+.nav-link {
+    font-size: 70%;
+}
+
+/* subtitulo del header */ 
+.header_subtitulo {
+    font-size:100%;
+    font-weight: bold;
+}
+
+
+/*tamaño letra banner inf */
+.bannerinf_columnas {
+    font-size: 150;
+
+}
+
+/* tamaño letra recetas */
+.padreFlexSecciones p {
+    font-size: 140%;
+    text-align: left;
+    font-family: Josefin Sans;
+}
+
+.preguntasFlex p {
+    font-family: Josefin Sans;
+    font-size: 120%;
+}
+
+/* estilo tipografia footer */ 
+.footer {
+    ul .social-icons {
+        li {
+            i {
+                margin-bottom: 20px;
+                text-decoration: none;
+                font-family:Kanit;
+                font-weight: bolder;
+                align-items: center;
+                font-size: 25px;
+            }
+        }
+            
+    }
+}
+/* tipografia seccion recetas pagina principal */
+.card h4 {
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 15px;
+    font-style: bold;
+}

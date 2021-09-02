@@ -1,0 +1,559 @@
+/* media query tablet */
+@media only screen and (max-width:768px) {
+    .contenedorTotal {
+        width: 100%;
+        border: none;
+        font-size: 15px;
+        margin: auto;
+    }
+    
+    
+    .contenedor div {
+        display: block;
+    }
+    
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(10, auto);
+        grid-gap: 15px;
+    }
+
+    .header_titulo  {
+        color:black;
+    
+    }
+    
+    h1  {
+        width: 100%;
+        font-weight: 500 bold;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+
+    
+    .contenedor .header {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+​    
+    header a img {
+        width: 10%;
+    }
+
+    div .tituloPrincipal h1 {
+        padding-top: 50%;
+    }
+
+    .contenedor .info {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .contenedor .premezcla {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .color_subtitulos {
+        color:#cb997e;
+    }
+    
+    p {
+        color:black;
+    }
+    
+    .contenedor .comida {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        display: block;
+    }
+       
+    
+    .columnas_fotos  {
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+        text-decoration:none;
+    }
+    aside {
+        background-color:#fff1e6;
+        display: inline-block;
+    }
+    aside a img {
+        width: 30%;
+    }
+
+    .contenedor .banner {
+        grid-column: 1/3;
+        grid-row: 4/5;
+        display: block;
+    }
+    
+    .contenedorColumnas {
+        width: 100%;
+        margin:auto;
+        text-align: center;
+    }
+    
+    .bannerinf_columnas {
+        width: 100%;
+        float: left;
+        background-color: #ddbea9;
+        font-size: 15px;
+        color:  #565656;
+    }
+    
+    .contenedor .encargues {
+        grid-column: 1/3;
+        grid-row: 5/6;
+        
+    }
+    .contenedor .recetas {
+        grid-column: 1/3;
+        grid-row: 6/8;
+        display: block;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin:auto;
+        margin-bottom: 10%;
+        
+            .card {
+                width: 25%;
+                border-radius: 8px;
+                box-shadow: 0 2px 0px rgba (0, 0, 0, 0.1);
+                overflow: hidden;
+                margin: 20px;
+                text-align: center;
+                transition: all 0.25s;
+                display: inline-block;
+            }
+        
+    }
+
+    .contenedor .form {
+        grid-column: 1/3;
+        grid-row: 8/9;
+    }
+ 
+    .form {
+        padding-top: 5%;
+    }
+    
+    .contenedor .footer {
+        grid-column: 1/3;
+        grid-row: 9/10;
+        text-align: center;
+    }
+    
+    footer ul li{
+        color: #cb997e;
+        list-style: none;
+    }
+    .footer {
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-around;
+    } 
+
+    
+    .subtitulos_confondos {
+        color: #cb997e;
+        background-color: #ede0d4;
+        text-align: center;
+        
+    }
+    div .tituloPrincipalpreguntas h1 {
+        padding-top: 20%;
+    }
+    .padreFlex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content:space-around;
+        width: 100%;
+
+    }
+
+    .hijosFlex {
+        width: 50%;
+        margin-top: 30px;
+        flex-grow: 0;
+        overflow: hidden;
+        text-align: center;
+            img:hover {
+                transform: scale(2,2);
+            }
+        flex-wrap: wrap;
+    }   
+
+    .padreFlex .recetasFlex p {
+        text-align: left;
+    }
+    
+    .recetasFlex {
+        display: block;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+        img {
+            width: 50%;
+            margin-left: 25%;
+        }
+    }
+
+    .recetasFlex p {
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+    }
+
+    .padreFlex__pregunta {
+        display: flex;
+        flex-direction: column;
+    }
+    .preguntasFlex {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        flex-grow: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 70%;
+        }
+    } 
+    .color_subtitulosrecetas {
+        margin-right: 15%;
+    }
+
+    .padreFlex .recetasFlex p {
+        font-size: 120%;
+    }
+    .quienesFlex {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        flex-grow: 0;
+        overflow: hidden;
+        text-align: center;
+        
+    }
+
+    .padreFlex .quienesFlex img {
+        width: 40%;
+    }
+    
+    .padreFlex h3 {
+        padding-top: 30px;
+    }
+    /* tamaño de las fotos seccion quienes somos */
+    .fotosQuienes {
+        text-align: center;
+    }
+    .fotosQuienes img {
+        width: 80%;
+    
+    }
+    
+    
+}
+
+/* estilos media query celular */
+@media only screen and (max-width:380px) {
+    .contenedorTotal {
+        width: 100%;
+        border: none;
+        font-size: 15px;
+        margin: auto;
+    }
+    
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(10, auto);
+        grid-gap: 15px;
+    }
+
+    .header_titulo {
+        font-family: Lora;
+        font-size: 270%;
+        color:black;
+
+        
+    }
+    
+    .contenedor .header {
+        grid-column: 1;
+        grid-row: 1/2;
+    }
+​   
+    header a img {
+        width: 5%;
+    }
+    
+    .contenedor .info {
+        grid-column: 1;
+        grid-row: 2/3;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+    .info p {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+    .contenedor .premezcla {
+        grid-column: 1;
+        grid-row: 3/4;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+    .premezcla p {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+    .premezcla {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+    .color_subtitulos {
+        color:#cb997e;
+    }
+    
+    p {
+        color:black;
+    }
+    
+    .contenedor .banner {
+        grid-column: 1;
+        grid-row: 4/5;
+        display: block;
+    }
+    
+    .contenedorColumnas {
+        width: 100%;
+        margin:auto;
+        text-align: center;
+    }
+    
+    .bannerinf_columnas{
+        width: 100%;
+        float: left;
+        background-color: #ddbea9;
+        font-size: 15px;
+        color:  #565656;
+    }
+    
+    .contenedor .comida {
+        grid-column: 1;
+        grid-row: 5/6;
+        display: block;
+    }
+       
+    
+    .columnas_fotos  {
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+        text-decoration:none;
+    }
+    aside {
+        background-color: #ddbea9;
+        display: block;
+    }
+    aside a img {
+        width: 90%;
+    }
+    .contenedor .encargues {
+        grid-column: 1;
+        grid-row: 6/7;
+        justify-content: center;
+    
+    }
+    .contenedor .recetas {
+        grid-column: 1;
+        grid-row: 7/8;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin:auto;
+        margin-bottom: 250%;
+        
+            .card {
+                width: 60%;
+                border-radius: 8px;
+                overflow: hidden;
+                margin: 20px;
+                margin-left: 20%;
+                text-align: center;
+                transition: all 0.25s;
+                display: inline-block;
+                .card:hover {
+                    transform:translateY(-15px);
+                    box-shadow: 0 3px 6px rgba (0, 0, 0, 0.1);
+                }
+            }
+        
+    }
+    .contenedor .form {
+        grid-column: 1;
+        grid-row: 8/9;
+    }
+    .form {
+        padding-top: 15%;
+
+    }
+    .contenedor .footer {
+        grid-column: 1;
+        grid-row: 9/10;
+        text-align: center;
+    }
+    
+    footer ul li{
+        color: #cb997e;
+        list-style: none;
+    }
+    
+    .subtitulos_confondos {
+        color: #cb997e;
+        background-color: #ede0d4;
+        text-align: center;
+        
+    }
+    
+    
+    .padreFlex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content:space-around;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .hijosFlex {
+        width: 100%;
+        margin-top: 30px;
+        flex-grow: 0;
+        overflow: hidden;
+        text-align: center;
+            img:hover {
+                transform: scale(2,2);
+            }
+        flex-wrap: wrap;
+        
+
+    } 
+    
+    .recetasFlex {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        flex-grow: 0;
+        overflow: hidden;
+        text-align: center;
+        display: inline-block;
+        
+        img {
+            width: 60%;
+            margin-left: 3%;
+        }
+        
+    }
+      
+    .padreFlex .recetasFlex p {
+        font-size: 120%;
+        text-align: left;
+        padding-top: 5%;
+    }
+    .color_subtitulosrecetas {
+        margin-left: 14%;
+    }
+    .preguntasFlex {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        flex-grow: 0;
+        overflow: hidden;
+        display: inline-block;
+        
+        img {
+            width: 90%;
+            margin-left: 3%;
+        }
+    } 
+    .preguntasFlex p {
+        text-align: left;
+    }
+    div .tituloPrincipalpreguntas h1 {
+        padding-top: 50%;
+    }
+    .quienesFlex {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        flex-grow: 0;
+        overflow: hidden;
+        text-align: center;
+        flex-direction: column;
+
+    }
+    .padreFlex .quienesFlex img {
+        width: 100%;
+    }
+    .padreFlex .color_subtitulosrecetas {
+        padding-top: 30px;
+    }
+    /* tamaño de las fotos seccion quienes somos */
+    .fotosQuienes {
+        text-align: center;
+    }
+    .fotosQuienes img {
+        width: 70%;
+    
+    }
+    
+    div .tituloPrincipalregalos h1 {
+        padding-top: 40%;
+    }
+    
+    #padreFlex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content:space-around;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .productosCarrito {
+        width: 100%;
+        margin-top: 30px;
+        flex-grow: 0;
+        overflow: hidden;
+        text-align: center;
+            img:hover {
+                transform: scale(2,2);
+            }
+        flex-wrap: wrap;
+        
+
+    } 
+}
+
+/*boton de whatsapp */ 
+@media only screen and (min-width: 380px) and (max-width: 768px){
+    .btn-wsp {
+        width: 63px;
+        line-height: 58px;
+        }
+}
