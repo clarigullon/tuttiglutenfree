@@ -29,13 +29,6 @@ class Producto {
     "imagenesventa/bandejitagrande-min.jpg",
     0
   );
-  const bandejitachica = new Producto(
-    "Bandejita de mini tortitas x8",
-    Math.random().toString(36).substr(2, 9),
-    700,
-    "imagenesventa/bandejitachica-min.jpg",
-    0
-  );
   const cabsha = new Producto(
     "Torta Cabsha",
     Math.random().toString(36).substr(2, 9),
@@ -210,7 +203,6 @@ productos.push(
 superdesayuno,
 desayuno,
 bandejitagrande,
-bandejitachica,
 cabsha,
 rogel,
 helada,
@@ -246,10 +238,10 @@ window.onload = function (){
 for (const producto of productos) {
     $("#postresCards")
         .append(`<div class="productosCarrito" id=${producto.id}> <img src= ${producto.img} />
-    <p>  ${producto.nombre}</p>
-    <b> $ ${producto.precio}</b> <br>
-    <button id="${producto.id}" class="btn">AGREGAR</button> <br>
-    </div> `);
+                <p>  ${producto.nombre}</p>
+                <b> $ ${producto.precio}</b> <br>
+                <button id="${producto.id}" class="btn">AGREGAR</button> <br>
+                </div> `);
 }
 $(".btn").click((e)=>agregarProducto(e))
 function agregarClick(e) {
@@ -309,16 +301,25 @@ function cantidadItem (e) {
 }
 function sumarItem (e) {
   carrito = JSON.parse(localStorage.getItem("MiCarrito"));
+  let valorActual = parseInt($("#totalCompra").val())
   let item = carrito.find((item) => item.id == e.target.id);
   let cantidad = parseInt($("#contador"+ item.id).val()) + 1;
   $("#contador"+item.id).val(cantidad);
+  valorActual += item.precio;
+  item.cantidad += 1;
+  $("#totalCompra").val(parseInt(valorActual));
   localStorage.setItem("MiCarrito", JSON.stringify(carrito));
+  
 }
 function restarItem (e) {
   carrito = JSON.parse(localStorage.getItem("MiCarrito"));
+  let valorActual = parseInt($("#totalCompra").val())
   let item = carrito.find((item) => item.id == e.target.id);
   let cantidad = parseInt($("#contador"+ item.id).val()) -1;
   $("#contador"+item.id).val(cantidad);
+  valorActual -= item.precio;
+  item.cantidad -= 1;
+  $("#totalCompra").val(parseInt(valorActual));
   localStorage.setItem("MiCarrito", JSON.stringify(carrito));
 }
 function mostrarItems(array) {
@@ -331,10 +332,14 @@ function removerItem(e) {
   carrito = JSON.parse(localStorage.getItem("MiCarrito"));
   let indexDelProducto = carrito.findIndex((item) => item.id == e.target.id);
   if (indexDelProducto !== -1) {
+    let item = carrito.find((item) => item.id == e.target.id);
+    let valorActual = parseInt($("#totalCompra").val())
+    valorActual -= parseInt(item.precio*item.cantidad)
     carrito.splice(indexDelProducto, 1);
     localStorage.setItem("MiCarrito", JSON.stringify(carrito));
     let idARemover = "#remover" + e.target.id
     $(idARemover).remove()
+    $("#totalCompra").val(valorActual)
   }
 }
 $("#sideNavClose").click(() => closeNav())
