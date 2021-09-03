@@ -41,7 +41,7 @@ class Producto {
     Math.random().toString(36).substr(2, 9),
     1300,
     "imagenesventa/rogel2.JPG",
-    20
+    0
   );
   const helada = new Producto(
     "Torta Helada",
@@ -249,7 +249,7 @@ if ((e.target !== null) && (e.target !== "undefined")) {
     e.target.style.opacity = "0.8";
     e.target.style.backgroundColor = "#ffd7ba"; 
     e.target.innerHTML = "Agregado!"; 
-    }
+    } 
 }
 let carrito = [];
 let carritoSeccion = []
@@ -263,7 +263,6 @@ function agregarProducto(e) {
     carritoSeccion = JSON.parse(localStorage.getItem(productoClickeado.seccion));
   }
   productoClickeado.cantidad += 1;
-  //console.log(productoClickeado.cantidad)
   carrito.push(productoClickeado);
   carritoSeccion.push(productoClickeado);
   localStorage.setItem("MiCarrito", JSON.stringify(carrito));
