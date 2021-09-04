@@ -382,13 +382,17 @@ aside {
   overflow: hidden;
   text-align: center; }
 
-.btn {
+.btn-agregar {
   width: 50%;
   padding: 8px;
   background-color: #f0efeb;
   outline: none;
   border: solid #cb997e;
   cursor: pointer; }
+
+.btn-final {
+  width: 80%;
+  text-align: center; }
 
 .openbtn {
   cursor: pointer;
@@ -460,6 +464,17 @@ i.fa-shopping-cart {
   text-align: center;
   background-color: #f1f1f1;
   font-size: 150%; }
+
+.inputCantidad {
+  text-align: center;
+  width: 30%;
+  border-radius: 30%;
+  border-style: bold;
+  font-style: bold;
+  background-color: #eddcd2; }
+
+.restarIcon {
+  float: left; }
 
 /*grilla contenedora general*/
 .contenedorTotal {
