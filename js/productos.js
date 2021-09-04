@@ -231,8 +231,10 @@ bizcochitoslibritos
 let paginaActual = window.location.pathname;
 window.onload = function (){
     $("#totalCompras").append( `<h3>TOTAL:</h3>
-    <input id="totalCompra" value=0 type="text">`)
+    <input id="totalCompra" value=0 type="text">
+    <div id="finalizarCompra" type="button" class="btn-outline-secondary"><a href="comprafinal.html">FINALIZAR COMPRA</a></div>`)
     deshabilitarBotones();
+    resumenCompra();
 }
 for (const producto of productos) {
     $("#postresCards")
@@ -271,6 +273,7 @@ function agregarProducto(e) {
   agregarItem(productoClickeado);
   total(productoClickeado);
   document.getElementById("totalCompras").style.visibility = "visible";
+  document.getElementById("finalizarCompra").style.visibility = "visible";
   document.getElementById("carritoVacio").style.visibility = "hidden";
 }
 function total(productoClickeado){
@@ -348,6 +351,7 @@ function removerItem(e) {
     rehabilitarBoton(item);
     if (valorActual == 0) {
         document.getElementById("totalCompras").style.visibility = "hidden";
+        document.getElementById("finalizarCompra").style.visibility = "hidden";
         document.getElementById("carritoVacio").style.visibility = "visible";
     }
   }
@@ -361,14 +365,14 @@ function openNav() {
   let carritoLocalStorage = JSON.parse(localStorage.getItem("MiCarrito"))
   document.getElementById("mySidenav").style.width = "250px";
   if (carritoLocalStorage == null || carritoLocalStorage === [] || (Array.isArray(carritoLocalStorage) && carritoLocalStorage.length == 0)) {
-    console.log("aca estoy");
     document.getElementById("carritoVacio").style.visibility = "visible";
     document.getElementById("totalCompras").style.visibility = "hidden";
+    document.getElementById("finalizarCompra").style.visibility = "hidden";
   }
   else {
-    console.log("entre tmb")
     document.getElementById("carritoVacio").style.visibility = "hidden";
     document.getElementById("totalCompras").style.visibility = "visible";
+    document.getElementById("finalizarCompra").style.visibility = "visible";
    
     if (document.getElementById("mySidenav") !== null && document.getElementById("mySidenav").childElementCount <= 3) {
         mostrarItems(carritoLocalStorage);
@@ -408,4 +412,27 @@ function rehabilitarBoton(producto) {
     button.disabled = false;
     button.style.backgroundColor = "#f0efeb"; 
     button.innerHTML = "AGREGAR"; 
+}
+
+function resumenCompra(carritoFinal) {
+    carritoFinal = JSON.parse(localStorage.getItem("MiCarrito"));
+    carritoFinal.forEach(producto => {
+        $("#datosCompraFinal").append(`<div class="resumenCompra"><h3>Producto: ${producto.nombre}</h3>
+        <h3>Cantidad: ${producto.cantidad}</h3>
+        <img src= ${producto.img} />
+        <h3>Precio: ${producto.precio}</h3>
+        <br> <br></div>`)
+    });
+        
+    realizarOtraCompra()
+}
+function realizarOtraCompra(){
+    $("#volverAIndex").append(`<div id="volverATutti" type="button"><a href="index.html">Realizar otra compra en TuttiGlutenFree</a>
+    </div>
+    `)
+    $("#volverAIndex").click((e)=> volverATutti())
+}
+
+function volverATutti () {
+    localStorage.clear("MiCarrito");
 }

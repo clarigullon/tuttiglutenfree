@@ -42,7 +42,7 @@ div .tituloPrincipal h1 {
 .premezcla {
   margin-right: 5%; }
 
-/* header secciones postres */
+/* header secciones productos*/
 .fondoProductos {
   background: url(../imagenespilares/salados2.jpg);
   width: 100%;
@@ -345,36 +345,6 @@ aside {
 #postresCards img {
   width: 80%; }
 
-#paraelteCards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-around;
-  width: 100%;
-  font-size: 100%; }
-
-#paraelteCards p {
-  text-align: center; }
-
-#paraelteCards img {
-  width: 80%; }
-
-#saladosCards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-around;
-  width: 100%;
-  font-size: 100%; }
-
-#saladosCards p {
-  text-align: center; }
-
-#saladosCards img {
-  width: 80%; }
-
 .padreFlex {
   width: 25%;
   margin-top: 30px;
@@ -475,6 +445,33 @@ i.fa-shopping-cart {
 
 .restarIcon {
   float: left; }
+
+.resumenCompra {
+  display: flex;
+  display: inline-block;
+  align-items: center;
+  background-color: #f1f1f1;
+  width: 30%;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px; }
+
+.resumenCompra h3 {
+  font-size: 120%; }
+
+.resumenCompra img {
+  width: 30%; }
+
+#datosCompraFinal {
+  margin-top: 0;
+  padding-top: 0;
+  text-align: center; }
+
+#volverATutti {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 180%; }
 
 /*grilla contenedora general*/
 .contenedorTotal {
@@ -656,6 +653,9 @@ aside {
   color: black;
   background-color: #fff1e6;
   text-align: center; }
+
+.tituloFinal {
+  background-color: #fff1e6; }
 
 /* media query tablet */
 @media only screen and (max-width: 768px) {
