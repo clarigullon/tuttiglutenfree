@@ -229,18 +229,3 @@ bizcochitosgrasa,
 bizcochitoslibritos
 );
 let paginaActual = window.location.pathname;
-window.onload = function (){
-    $("#totalCompras").append( `<h3>TOTAL:</h3>
-    <input id="totalCompra" value=0 type="text">
-    <div id="finalizarCompra" type="button" class="btn-outline-secondary"><a href="comprafinal.html">FINALIZAR COMPRA</a></div>`)
-    deshabilitarBotones();
-    resumenCompra();
-}
-for (const producto of productos) {
-    $("#postresCards")
-        .append(`<div class="productosCarrito" id=${producto.id}> <img src= ${producto.img} />
-                <p> ${producto.nombre}</p>
-                <b> $${producto.precio}</b> <br>
-                <button id="agregar${producto.id}" class="btn-agregar">AGREGAR</button> <br>
-                </div> `);
-}
