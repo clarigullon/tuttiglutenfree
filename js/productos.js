@@ -66,7 +66,7 @@ class Producto {
   );
   const frutilla = new Producto(
     "Tarta de Frutilla",
-   9,
+    9,
     900,
     "imagenesventa/tartafrut.jpg",
     0

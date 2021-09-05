@@ -190,7 +190,7 @@ function resumenCompra(carritoFinal) {
         $("#datosCompraFinal").append(`<div class="resumenCompra"><h3>Producto: ${producto.nombre}</h3>
         <h3>Cantidad: ${producto.cantidad}</h3>
         <img src= ${producto.img} />
-        <h3>Precio: ${producto.precio}</h3>
+        <h3>Precio: ${producto.precio*producto.cantidad}</h3>
         <br> <br></div>`)
     });
         
